@@ -1,5 +1,10 @@
 {
   "extends": ["airbnb", "airbnb/hooks"],
+  "globals": {
+    "it": true,
+    "expect": true,
+    "describe": true
+  },
   "rules": {
     "linebreak-style": "off"
   },

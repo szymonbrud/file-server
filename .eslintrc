@@ -3,10 +3,14 @@
   "globals": {
     "it": true,
     "expect": true,
-    "describe": true
+    "describe": true,
+    "jest": true,
+    "beforeEach": true
   },
   "rules": {
-    "linebreak-style": "off"
+    "linebreak-style": "off",
+    "global-require": "off",
+    "import/prefer-default-export": "off"
   },
   "settings": {
     "import/resolver": {

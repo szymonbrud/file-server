@@ -7,7 +7,7 @@ describe('→router password', () => {
       .post('/authenticationPassword')
       .send({ password: 'haslo' })
       .expect((res) => {
-        expect(res.body).toEqual({ status: 'OK', auth: true });
+        expect(res.body).toHaveProperty('auth', true);
       })
       .end(done);
   });

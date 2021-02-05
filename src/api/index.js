@@ -1,6 +1,8 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import { v4 as uuid } from 'uuid';
+import fs from 'fs';
+import path from 'path';
 
 import checkAuthKeyValidation from 'middleware';
 import { addKey } from 'assets/authorizatedAccount';
@@ -25,6 +27,9 @@ router.post('/authenticationPassword', [urlencodedParser], (req, res) => {
   res.end();
 });
 
-router.post('/getFiles', [urlencodedParser, checkAuthKeyValidation], (req, res) => {});
+// router.post('/getFiles', [urlencodedParser, checkAuthKeyValidation], (req, res) => {
+router.post('/getFiles', [urlencodedParser], (req, res) => {
+  const folders = fs.readFileSync('../assets/authorizatedAccount.js');
+});
 
 export default router;
